@@ -472,3 +472,30 @@ sect{
 #image-hero {
     height: 300px !important;
 }
+
+.f-container {
+    justify-content: space-between;
+}
+
+.f-left {
+    gap: 1rem;
+
+}
+
+.f-menu {
+    gap: 1.5rem;
+    margin-top: 1.5em;
+    font-weight: 500;
+}
+
+.footer-style {
+    display: flex;
+    row-gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu {
+    right: -80%;
+}

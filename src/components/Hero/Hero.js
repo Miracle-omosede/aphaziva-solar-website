@@ -11,6 +11,8 @@ import { TbSolarPanel } from "react-icons/tb";
 import { VscSettingsGear } from "react-icons/vsc";
 import { TbBatteryAutomotive } from "react-icons/tb";
 import { BsArrowRight } from "react-icons/bs";
+import { TbSend } from "react-icons/tb"
+import  logo from "./logo.png"
 
 import Men from "./business-man.jpg";
 import Ladderman from "./man-with-helment.jpg";
@@ -24,8 +26,25 @@ import { GrSolaris } from "react-icons/gr";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { GiEarthAfricaEurope } from "react-icons/gi";
 import CountUp, { useCountUp } from 'react-countup';
+import Speedometer from './speedometer.png'
+import Tool from "./tool.png"
+import Distance from "./distance.png"
+import Products from "../Products/Products";
+import "../Products/Products.css"
+import {BiMenuAltRight} from 'react-icons/bi'
+import { MdHeadsetMic } from "react-icons/md"
+import ScrollToTop from "react-scroll-to-top";
+import Colorlogo from "./alphaziva.png"
+import OutsideClickHandler from "react-outside-click-handler";
 
 const Hero = () => {
+  const [menuOpened, setMenuOpened]= useState(false)
+  const getMenuStyles = (menuOpened) => {
+    if (document.documentElement.clientWidth <= 800)
+    {
+      return {right: !menuOpened && "-100%"}
+    }
+  }
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideLength = sliderData.length;
 
@@ -67,20 +86,59 @@ const Hero = () => {
 
   return (
     <div>
+      <div className="scroll-top">
+        <ScrollToTop
+          smooth
+          className=" w-10 pl-1 self-center 
+              bg-[#ffdb00]"
+          top="20"
+          id="fill"
+        />
+      </div>
+
       <header className="py-4">
         <div className="container">
-          <input type="checkbox" name="" id="check" />
+          {/* <input type="checkbox" name="" id="check" /> */}
 
           <div className="logo-container">
-            <h3 className="logo font-extrabold cursor-pointer">
+            {/* <h3 className="logo font-extrabold cursor-pointer">
               alpha{" "}
               <span>
                 <span className="text-[#FFA404] font-extrabold">ziva </span>
               </span>
-            </h3>
+            </h3> */}
+            <div className="cursor-pointer">
+              <img src={logo} alt="company" className="w-2/4 md:w-1/5" />
+            </div>
           </div>
 
-          <div className="nav-btn mt-7">
+          <OutsideClickHandler onOutsideClick={()=>{
+            setMenuOpened(false)
+          }}>
+            <div
+              className="h-menu flexCenter md:mt-0 mt-10 gap-3"
+              style={getMenuStyles(menuOpened)}
+            >
+              <a href="">About Us</a>
+              <a href="">Services</a>
+              <a href="">Projects</a>
+              {/* <a href="">Get Started</a> */}
+
+              <button className="py-3 px-6 rounded-lg text-black bg-[#ffdb00] gap-2 flex items-center">
+                <MdHeadsetMic />
+                <span>Contact Us</span>
+              </button>
+            </div>
+          </OutsideClickHandler>
+
+          <button
+            className="menu-icon hidden items-center menu justify-center"
+            onClick={() => setMenuOpened((prev) => !prev)}
+          >
+            <BiMenuAltRight size={30} />
+          </button>
+
+          {/* <div className="nav-btn">
             <div className="nav-links">
               <ul>
                 <li className="nav-link">
@@ -147,13 +205,13 @@ const Hero = () => {
                 <span>Contact Us</span>
               </a>
             </div>
-          </div>
+          </div> */}
 
-          <div className="hamburger-menu-container">
+          {/* <div className="hamburger-menu-container">
             <div className="hamburger-menu">
               <div></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </header>
       <main>
@@ -183,10 +241,9 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
           <div className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-x-hidden mt-20 md:mr-0">
-            <div className="grid grid-cols-12 gap-10 relative">
-              <div className="md:col-span-6 col-span-12 pr-20 md:pr-0  flex flex-col items-start justify-center w-full">
+            <div className="grid grid-cols-12 md:gap-10 gap-0 relative">
+              <div className="md:col-span-6 col-span-12 md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
                   our service
                 </h2>
@@ -194,7 +251,7 @@ const Hero = () => {
                   We drive the transition to reliable energy
                 </h1>
               </div>
-              <div className="md:col-span-6 col-span-12 w-full h-full flex items-center text-[#1F2541] justify-center pr-20 md:pr-0">
+              <div className="md:col-span-6 col-span-12 w-full h-full flex items-center text-[#1F2541] justify-center py-5 md:pr-0">
                 <p>
                   We drive the transition to more sustainable reliable and
                   affordable energy systems. With our innovative technologies,
@@ -202,8 +259,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-
-            <div className="grid grid-cols-12 w-full my-16 gap-10 overflow-hidden">
+            <div className="grid grid-cols-12 w-full my-16 md:gap-10 gap-0 overflow-hidden">
               <div className="md:col-span-6 col-span-12 flex flex-col gap-8 overflow-hidden">
                 <div className="flex flex-row gap-3 overflow-hidden">
                   <div className="text-white flex items-start">
@@ -211,7 +267,7 @@ const Hero = () => {
                       <TbSolarPanel />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-4 md:mr-0  mr-24">
+                  <div className="flex flex-col gap-4 md:mr-0 ">
                     <h1 className="text-[#37416b] font-semibold text-xl">
                       Solar Pannel Services
                     </h1>
@@ -222,7 +278,7 @@ const Hero = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-row gap-3 md:mr-0 mr-24">
+                <div className="flex flex-row gap-3 md:mr-0 md">
                   <div className="text-white flex items-start">
                     <div className="rounded-full bg-[#FFA404] p-6 text-2xl">
                       <VscSettingsGear />
@@ -230,17 +286,17 @@ const Hero = () => {
                   </div>
                   <div className="flex flex-col gap-4">
                     <h1 className="text-[#37416b] font-semibold text-xl">
-                      Hydro Power plant Services
+                      Load Assessment and Evaluation
                     </h1>
                     <p className="text-sm text-[#1F2541]">
-                      Harness hydroelectric power for a greener future with our
-                      expert plant services. Trust our reputable company to
-                      maximize efficiency and sustainability, unlocking the
-                      immense potential of water.
+                      Accurate analysis and precise evaluation of your load
+                      requirements. Our experts conduct thorough assessments to
+                      determine your specific energy needs and ensure optimal
+                      performance.
                     </p>
                   </div>
                 </div>
-                <div className="flex flex-row gap-3 md:mr-0 mr-24">
+                <div className="flex flex-row gap-3 md:mr-0">
                   <div className="text-white flex items-start">
                     <div className="rounded-full bg-[#FFA404] p-6 text-2xl">
                       <TbBatteryAutomotive />
@@ -258,7 +314,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-6 col-span-12 flex flex-col items-center justify-center w-3/4">
+              <div className="md:col-span-6 col-span-12 mt-4 md:mt-0 flex flex-col items-center justify-center w-full">
                 <div className="w-full service-container bg-black rounded-lg">
                   <div className="overlay"></div>
                   <video
@@ -311,7 +367,7 @@ const Hero = () => {
                           alt="slide"
                           className=" md:h-[100vh] object-cover md:object-fill"
                         />
-                        <div className="slider-content flex h-full justify-center w-full items-center flex-col py-28">
+                        <div className="slider-content flex h-full justify-center w-full items-center flex-col py-28 ">
                           <div className="mx-auto max-w-[85rem] w-full items-center md:px-10 px-4">
                             <h1 className="text-white flex md:w-[60%] md:text-4xl text-4xl font-bold tracking-wider">
                               {slide.heading}
@@ -319,15 +375,15 @@ const Hero = () => {
                             <p className="md:text-2xl font-semibold md:w-[60%] py-4">
                               {slide.desc}
                             </p>
-                            <div className="flex md:gap-10">
-                              {/* <BsArrowLeft
-                        className="arrow prev fill-white text-white"
-                        onClick={prevSlide}
-                      />
-                      <BsArrowRight
-                        className="arrow next fill-white text-white"
-                        onClick={nextSlide}
-                      /> */}
+                            <div className="flex gap-16">
+                              <BsArrowLeft
+                                className="arrowly previous fill-white hover:text-black transition hover:fill-black text-white"
+                                onClick={prevSlide}
+                              />
+                              <BsArrowRight
+                                className="arrowly next hover:fill-black transition fill-white text-white"
+                                onClick={nextSlide}
+                              />
                             </div>
                           </div>
                         </div>
@@ -339,18 +395,105 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-full items-center justify-center">
+          <div className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-hidden md:mr-0">
+            <div className="grid grid-cols-12 md:gap-10 relative">
+              <div className="md:col-span-6 col-span-12  md:pr-0  flex flex-col items-start justify-center w-full">
+                <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
+                  about us
+                </h2>
+                <div>
+                  <div className="orange-circle"></div>
+                  <h1 className="capitalize text-[#1F2541] md:pr-0 font-bold md:text-5xl text-4xl">
+                    Alpha Ziva: Igniting Africa's Energy Transformation with
+                    Reliable and Sustainable Power Solutions
+                  </h1>
+                </div>
+              </div>
+              <div className="md:col-span-6 col-span-12 md:w-3/4 h-full flex items-center text-[#1F2541] md:mb-0 mb-4 justify-center md:pr-0">
+                <p>
+                  At <span className="text-[#FFA404]">Alpha ziva</span>, we are
+                  passionate about transforming the way you harness energy. As a
+                  leading provider of solar services, we specialize in
+                  delivering innovative and sustainable solutions to power your
+                  home or business. With our expertise and commitment to
+                  excellence, we empower you to embrace clean and renewable
+                  energy sources. Discover a brighter and greener future with
+                  Alpha Ziva as your trusted solar partner.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center justify-center h-full max-w-[50rem] mx-auto mt-10">
+              <div className="grid grid-cols-12 gap-3">
+                <div className="col-span-12  mb-5">
+                  <p>
+                    Excellence, efficiency, and unmatched customer satisfaction
+                    are the pillars of Alpha Ziva, your trusted solar company in
+                    Africa. We take great pride in delivering exceptional
+                    service that surpasses industry standards.
+                  </p>
+                </div>
+                <div className="col-span-12 flex flex-col gap-5">
+                  <span className="carder">
+                    <img src={Speedometer} alt="" />
+                  </span>
+                  <span>
+                    <p>
+                      <span className="font-bold">Delivery speed</span>, we
+                      understand the urgency of implementing your solar
+                      solution. Our streamlined processes and dedicated team
+                      ensure swift and efficient installations, minimizing any
+                      disruption to your schedule. At Alpha Ziva, we believe in
+                      getting your solar system up and running without delay.
+                    </p>
+                  </span>
+                </div>
+                <div className="col-span-12 flex flex-col gap-5 my-10">
+                  <span className="carder">
+                    <img src={Tool} alt="" />
+                  </span>
+                  <span>
+                    <span className="font-bold">Maintenance</span> is at the
+                    heart of our commitment to your long-term satisfaction. Our
+                    experienced technicians provide comprehensive support to
+                    keep your solar system performing optimally. From routine
+                    inspections to proactive maintenance, we ensure that your
+                    investment continues to generate clean energy efficiently.
+                  </span>
+                </div>
+              </div>
+              <div className="grid grid-cols-12">
+                <div className="col-span-12 flex flex-col gap-5">
+                  <span className="carder">
+                    <img src={Distance} alt="" />
+                  </span>
+                  <span>
+                    <p>
+                      <span className="font-bold">Distance </span>is never an
+                      obstacle with Alpha Ziva. Our services span across the
+                      entire African continent. Regardless of your location,
+                      from bustling urban centers to remote rural areas, we
+                      bring our expertise and reliable solutions to meet your
+                      unique energy needs. Our mission is to make clean energy
+                      accessible and affordable for all Africans.
+                    </p>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col w-full items-center justify-center pt-20">
             <div className="md:w-2/4 flex flex-col items-center justify-center pt-10">
               <h1 className="font-bold text-yellow-500 text-2xl uppercase">
                 our happy customers
               </h1>
-              <p className="text-5xl text-center text-[#1B213E] font-bold">
+              <p className="md:text-5xl text-4xl text-center text-[#1B213E] font-bold px-3 md:mx-0">
                 Providing value to our clients through ongoing Products.
               </p>
             </div>
 
             <div className="w-full md:hidden flex justify-center items-center">
-                  <img src={Africa} alt="Africa" className="w-3/4" />
+              <img src={Africa} alt="Africa" className="w-3/4" />
             </div>
 
             <div className="grid grid-cols-12">
@@ -358,34 +501,42 @@ const Hero = () => {
                 <div className="flex items-cetner">
                   <div className="flex flex-row gap-3">
                     <div className="flex items-center justify-center text-5xl text-yellow-500">
-                      < GiEarthAfricaEurope />
+                      <GiEarthAfricaEurope />
                     </div>
                     <div className="flex flex-col">
                       <span className="font-bold text-5xl">
-                      <CountUp end={1200} enableScrollSpy/>+
+                        <CountUp end={1200} enableScrollSpy />+
                       </span>
-                      <span className="text-sm font-bold">Clients across Africa</span>
+                      <span className="text-sm font-bold">
+                        Clients across Africa
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-cetner">
                   <div className="flex flex-row gap-3">
                     <div className="flex items-center justify-center text-yellow-500 text-5xl">
-                      < GrSolaris/>
+                      <GrSolaris />
                     </div>
                     <div className="flex flex-col">
-                      <span className="font-bold text-5xl"><CountUp end={100} enableScrollSpy />+</span>
-                      <span className="text-sm font-bold">Energy Solutiions</span>
+                      <span className="font-bold text-5xl">
+                        <CountUp end={100} enableScrollSpy />+
+                      </span>
+                      <span className="text-sm font-bold">
+                        Energy Solutiions
+                      </span>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-cetner">
                   <div className="flex flex-row gap-3">
                     <div className="flex items-center text-5xl justify-center text-yellow-500">
-                      < BsFillPatchCheckFill />
+                      <BsFillPatchCheckFill />
                     </div>
                     <div className="flex flex-col">
-                      <span className="font-bold text-5xl"><CountUp end={100} enableScrollSpy />%</span>
+                      <span className="font-bold text-5xl">
+                        <CountUp end={100} enableScrollSpy />%
+                      </span>
                       <span className="text-sm font-bold">Efficiency</span>
                     </div>
                   </div>
@@ -397,6 +548,10 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div>
+            <Products />
           </div>
 
           <div className="">
@@ -427,7 +582,7 @@ const Hero = () => {
                     <h1 className="text-5xl font-bold text-white">
                       Request a Quote now!
                     </h1>
-                    <p className="py-6 text-white">
+                    <p className="py-6 md:w-3/4 text-white">
                       Simplify procurement. Get tailored quotes from us with a
                       few clicks. Streamline your decision-making process today.
                     </p>
@@ -444,7 +599,7 @@ const Hero = () => {
                         <input
                           type="text"
                           placeholder="Tell us your first name"
-                          className="input input-bordered"
+                          className="input text-sm input-bordered"
                         />
                       </div>
                       <div className="form-control">
@@ -454,7 +609,7 @@ const Hero = () => {
                         <input
                           type="text"
                           placeholder="Tell us your last name"
-                          className="input input-bordered"
+                          className="input text-sm input-bordered"
                         />
                       </div>
                       <div className="form-control">
@@ -464,7 +619,7 @@ const Hero = () => {
                         <input
                           type="text"
                           placeholder="email"
-                          className="input input-bordered"
+                          className="input text-sm input-bordered"
                         />
                       </div>
                       <div className="form-control">
@@ -473,13 +628,18 @@ const Hero = () => {
                         </label>
                         <textarea
                           type="textarea"
+                          cols={30}
+                          rows={4}
                           placeholder="Tell us what you want..."
-                          className="py-5 input input-bordered"
+                          className="pt-3 text-sm input input-bordered"
                         />
                       </div>
                       <div className="form-control mt-6">
-                        <button className="btn btn-primary uppercase">
-                          Submit
+                        <button className="btn bg-[#FFA404] text-white border border-[#FFA404] uppercase gap-2">
+                          <span>Submit</span>
+                          <span>
+                            <TbSend />
+                          </span>
                         </button>
                       </div>
                     </div>
@@ -490,32 +650,35 @@ const Hero = () => {
           </div>
 
           <div>
-          <footer className="footer p-10 bg-base-200 text-base-content">
-  <div>
-    <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" className="fill-current"><path d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"></path></svg>
-    <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
-  </div> 
-  <div>
-    <span className="footer-title">Services</span> 
-    <a className="link link-hover">Branding</a> 
-    <a className="link link-hover">Design</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
-  </div> 
-  <div>
-    <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
-  </div> 
-  <div>
-    <span className="footer-title">Legal</span> 
-    <a className="link link-hover">Terms of use</a> 
-    <a className="link link-hover">Privacy policy</a> 
-    <a className="link link-hover">Cookie policy</a>
-  </div>
-</footer>
+            <div className="f-wrapper w-full md:pt-0 pt-10 flex flex-row justify-between">
+              <div className="paddings innerWidth footer-style f-container md:ml-36 ml-0 w-full">
+                {/* left-side */}
+                <div className="flexColStart f-left">
+                  <img src={logo} alt="company" className="w-2/4 md:w-1/5" />
+                  <span className="secondaryText">
+                    Our vision is to make all people <br /> the best place for
+                    them
+                  </span>
+                </div>
+
+                <div className="flexColStart f-right">
+                  <span className="primaryText">Information</span>
+                  <span className="secondaryText">
+                    140 Azuba Lane, Abuja, Nigeria
+                  </span>
+
+                  <div className="flexCenter f-menu">
+                    <span>Service</span>
+                    <span>Products</span>
+                    <span>About Us</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="md:flex items-center justify-center hidden">
+                <img src={Colorlogo} alt="hello" className="opacity-25" />
+              </div>
+            </div>
           </div>
         </section>
       </main>

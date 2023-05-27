@@ -121,7 +121,7 @@
     transition: all 0.5s ease;
   }
   
-  /* .arrow {
+  .arrowly {
     border: 2px solid white;
     background-color: transparent;
     color: black;
@@ -133,27 +133,28 @@
     border-radius: 50%;
     position: relative;
     z-index: 999;
-  } */
-  .arrow:hover {
-    /* background-color: #fff; */
-    /* color: #777; */
+  }
+  .arrowly:hover {
+    background-color: #fff;
+    color: #777;
   }
   
   @media screen and (max-width: 600px) {
-    /* .arrow {
+    .arrowly {
       height: 3rem;
       width: 3rem;
-    } */
+    }
   }
   
-  /* .next {
+  .next {
     top: 35%;
     right: 1.5rem;
   }
-  .prev {
+
+  .previous {
     top: 35%;
     left: 1.5rem;
-  } */
+  }
   
   hr {
     height: 2px;
@@ -187,6 +188,24 @@
   background-size: cover;
   background-position: center;
   border-radius: 0;
+}
+
+
+
+.orange-circle {
+  height: 6rem;
+  width: 6rem;
+  background: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+  position: absolute;
+  border-radius: 999px;
+  left: 34%;
+  top: 5%;
+  z-index: -1;
+} 
+
+.carder >  img {
+  width: 100%;
+  max-width: 5rem;
 }
 
 
