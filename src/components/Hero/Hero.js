@@ -13,7 +13,7 @@ import { TbBatteryAutomotive } from "react-icons/tb";
 import { BsArrowRight } from "react-icons/bs";
 import { TbSend } from "react-icons/tb"
 import  logo from "./logo.png"
-
+import { Link } from "react-scroll"
 import Men from "./business-man.jpg";
 import Ladderman from "./man-with-helment.jpg";
 import SolarBatteries from "./wall-power.jpeg";
@@ -97,7 +97,7 @@ const Hero = () => {
       </div>
 
       <header className="py-4">
-        <div className="container">
+        <div className="container flex items-center">
           {/* <input type="checkbox" name="" id="check" /> */}
 
           <div className="logo-container">
@@ -112,27 +112,63 @@ const Hero = () => {
             </div>
           </div>
 
-          <OutsideClickHandler onOutsideClick={()=>{
-            setMenuOpened(false)
-          }}>
+          <OutsideClickHandler
+            onOutsideClick={() => {
+              setMenuOpened(false);
+            }}
+          >
             <div
               className="h-menu flexCenter md:mt-0 mt-10 gap-3"
               style={getMenuStyles(menuOpened)}
             >
-              <a href="">About Us</a>
-              <a href="">Services</a>
-              <a href="">Projects</a>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                href=""
+              >
+                About Us
+              </Link>
+              <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                href=""
+              >
+                Services
+              </Link>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+                href=""
+              >
+                Projects
+              </Link>
               {/* <a href="">Get Started</a> */}
 
-              <button className="py-3 px-6 rounded-lg text-black bg-[#ffdb00] gap-2 flex items-center">
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-150}
+                duration={500}
+                className="py-3 px-6 rounded-lg text-black bg-[#ffdb00] gap-2 flex items-center"
+              >
                 <MdHeadsetMic />
                 <span>Contact Us</span>
-              </button>
+              </Link>
             </div>
           </OutsideClickHandler>
 
           <button
-            className="menu-icon hidden items-center menu justify-center"
+            className="menu-icon md:hidden flex items-center menu justify-center"
             onClick={() => setMenuOpened((prev) => !prev)}
           >
             <BiMenuAltRight size={30} />
@@ -222,7 +258,7 @@ const Hero = () => {
             </video>
             <div className="content flex items-center justify-center">
               <div className="md:w-2/4">
-                <h1 className="text-white font-bold font-poppins text-5xl text-center uppercase">
+                <h1 className="text-white font-bold font-poppins text-2xl md:text-5xl text-center uppercase">
                   Power your future with reliable solar solutions.
                 </h1>
                 <p className="py-5 md:text-lg text-center text-white">
@@ -241,13 +277,16 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <div className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-x-hidden mt-20 md:mr-0">
+          <div
+            className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-x-hidden mt-20 md:mr-0"
+            id="services"
+          >
             <div className="grid grid-cols-12 md:gap-10 gap-0 relative">
               <div className="md:col-span-6 col-span-12 md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
                   our service
                 </h2>
-                <h1 className="capitalize text-[#1F2541] font-bold text-5xl">
+                <h1 className="capitalize text-[#1F2541] font-bold text-2xl md:text-5xl">
                   We drive the transition to reliable energy
                 </h1>
               </div>
@@ -260,7 +299,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="grid grid-cols-12 w-full my-16 md:gap-10 gap-0 overflow-hidden">
-              <div className="md:col-span-6 col-span-12 flex flex-col gap-8 overflow-hidden">
+              <div className="md:col-span-6 col-span-12 flex flex-col md:gap-8 gap-10 overflow-hidden">
                 <div className="flex flex-row gap-3 overflow-hidden">
                   <div className="text-white flex items-start">
                     <div className="rounded-full bg-[#FFA404] p-6 text-2xl">
@@ -314,7 +353,7 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:col-span-6 col-span-12 mt-4 md:mt-0 flex flex-col items-center justify-center w-full">
+              <div className="md:col-span-6 col-span-12 mt-16 md:mt-0 flex flex-col items-center justify-center w-full">
                 <div className="w-full service-container bg-black rounded-lg">
                   <div className="overlay"></div>
                   <video
@@ -327,7 +366,7 @@ const Hero = () => {
                     <source src={Rooftop} type="video/mp4"></source>
                   </video>
                 </div>
-                <div className="my-4">
+                <div className="md:my-4 my-9">
                   <h1 className="text-sm text-[#37416b] ">
                     As a leading supplier of solar materials, we not only
                     provide exceptional products but also offer expert
@@ -369,7 +408,7 @@ const Hero = () => {
                         />
                         <div className="slider-content flex h-full justify-center w-full items-center flex-col py-28 ">
                           <div className="mx-auto max-w-[85rem] w-full items-center md:px-10 px-4">
-                            <h1 className="text-white flex md:w-[60%] md:text-4xl text-4xl font-bold tracking-wider">
+                            <h1 className="text-white flex md:w-[60%] md:text-4xl text-2xl font-bold tracking-wider">
                               {slide.heading}
                             </h1>
                             <p className="md:text-2xl font-semibold md:w-[60%] py-4">
@@ -395,7 +434,10 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-hidden md:mr-0">
+          <div
+            className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-hidden md:mr-0"
+            id="about"
+          >
             <div className="grid grid-cols-12 md:gap-10 relative">
               <div className="md:col-span-6 col-span-12  md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
@@ -403,7 +445,7 @@ const Hero = () => {
                 </h2>
                 <div>
                   <div className="orange-circle"></div>
-                  <h1 className="capitalize text-[#1F2541] md:pr-0 font-bold md:text-5xl text-4xl">
+                  <h1 className="capitalize text-[#1F2541] md:pr-0 font-bold md:text-5xl text-2xl">
                     Alpha Ziva: Igniting Africa's Energy Transformation with
                     Reliable and Sustainable Power Solutions
                   </h1>
@@ -487,7 +529,7 @@ const Hero = () => {
               <h1 className="font-bold text-yellow-500 text-2xl uppercase">
                 our happy customers
               </h1>
-              <p className="md:text-5xl text-4xl text-center text-[#1B213E] font-bold px-3 md:mx-0">
+              <p className="md:text-5xl text-3xl text-center text-[#1B213E] font-bold px-3 md:mx-0">
                 Providing value to our clients through ongoing Products.
               </p>
             </div>
@@ -550,7 +592,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div>
+          <div id="projects">
             <Products />
           </div>
 
@@ -575,11 +617,11 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="quote-form mt-10">
+            <div className="quote-form mt-10" id="contact">
               <div className="hero min-h-screen bg-base-200 pt-10 quote-form">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                   <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold text-white">
+                    <h1 className="md:text-5xl text-2xl font-bold text-white">
                       Request a Quote now!
                     </h1>
                     <p className="py-6 md:w-3/4 text-white">
@@ -662,21 +704,49 @@ const Hero = () => {
                 </div>
 
                 <div className="flexColStart f-right">
-                  <span className="primaryText">Information</span>
+                  <span className="primaryText">Contact address:</span>
                   <span className="secondaryText">
-                    140 Azuba Lane, Abuja, Nigeria
+                    14 Hilltop Crescent, Off Ekwueme Close, Core Area,
+                    Asaba Delta State
                   </span>
 
-                  <div className="flexCenter f-menu">
-                    <span>Service</span>
-                    <span>Products</span>
-                    <span>About Us</span>
+                  <div className="flexCenter f-menu text-xs">
+                    <Link
+                      to="about"
+                      spy={true}
+                      smooth={true}
+                      offset={50}
+                      duration={500}
+                      href=""
+                    >
+                      About Us
+                    </Link>
+                    <Link
+                      to="services"
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={500}
+                      href=""
+                    >
+                      Services
+                    </Link>
+                    <Link
+                      to="projects"
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={500}
+                      href=""
+                    >
+                      Projects
+                    </Link>
                   </div>
                 </div>
               </div>
 
               <div className="md:flex items-center justify-center hidden">
-                <img src={Colorlogo} alt="hello" className="opacity-25" />
+                <img src={logo} alt="hello" className="opacity-25" />
               </div>
             </div>
           </div>
