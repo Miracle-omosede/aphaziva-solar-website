@@ -4,7 +4,6 @@ import "./herostyle.css";
 import { sliderData } from "./slider-data";
 import { useState, useEffect } from "react";
 import { BsArrowLeft } from "react-icons/bs";
-import SolarHouse from "./solar-house.png";
 import { BsHeadset } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa";
 import { TbSolarPanel } from "react-icons/tb";
@@ -14,10 +13,6 @@ import { BsArrowRight } from "react-icons/bs";
 import { TbSend } from "react-icons/tb"
 import  logo from "./logo.png"
 import { Link } from "react-scroll"
-import Men from "./business-man.jpg";
-import Ladderman from "./man-with-helment.jpg";
-import SolarBatteries from "./wall-power.jpeg";
-import Pannel from "./pannel.png";
 import Africa from "./Africa.png";
 import Workmen from "./solar-workers.mp4";
 import Rooftop from "./rooftop.mp4";
@@ -34,7 +29,6 @@ import "../Products/Products.css"
 import {BiMenuAltRight} from 'react-icons/bi'
 import { MdHeadsetMic } from "react-icons/md"
 import ScrollToTop from "react-scroll-to-top";
-import Colorlogo from "./alphaziva.png"
 import OutsideClickHandler from "react-outside-click-handler";
 
 const Hero = () => {
@@ -278,10 +272,10 @@ const Hero = () => {
             </div>
           </div>
           <div
-            className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-x-hidden mt-20 md:mr-0"
+            className="max-w-[85rem] bg-white mx-auto px-[2rem] flex flex-col overflow-x-hidden mt-20 md:mr-0"
             id="services"
           >
-            <div className="grid grid-cols-12 md:gap-10 gap-0 relative">
+            <div className="grid grid-cols-12 md:gap-10 bg-white gap-0 relative">
               <div className="md:col-span-6 col-span-12 md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
                   our service
@@ -435,7 +429,7 @@ const Hero = () => {
           </div>
 
           <div
-            className="max-w-[85rem] mx-auto px-[2rem] flex flex-col overflow-hidden md:mr-0"
+            className="max-w-[85rem] bg-white mx-auto px-[2rem] flex flex-col overflow-hidden md:mr-0"
             id="about"
           >
             <div className="grid grid-cols-12 md:gap-10 relative">
@@ -524,7 +518,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col w-full items-center justify-center pt-20">
+          <div className="flex flex-col w-full items-center justify-center bg-white pt-20">
             <div className="md:w-2/4 flex flex-col items-center justify-center pt-10">
               <h1 className="font-bold text-yellow-500 text-2xl uppercase">
                 our happy customers
@@ -630,10 +624,10 @@ const Hero = () => {
                     </p>
                   </div>
                   <div
-                    className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
+                    className="card bg-white flex-shrink-0 w-full max-w-sm shadow-2xl"
                     id="border"
                   >
-                    <div className="card-body">
+                    <div className="card-body bg-white">
                       <div className="form-control">
                         <label className="label">
                           <span className="label-text">Firstname</span>

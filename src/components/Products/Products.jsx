@@ -25,7 +25,7 @@ const Products = () => {
       };
     
   return (
-   <section className="r-wrapper pt-10">
+   <section className="r-wrapper pt-10 bg-white">
     <div className="paddings innerWidth r-container">
         <div className="r-head flexColStart">
             <span className='orangeText'>Recent</span>
