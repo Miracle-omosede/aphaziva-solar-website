@@ -29,7 +29,7 @@ function App() {
     ) : (
       <section
       className="App font-poppins overflow-hidden">
-        <div>
+        <div className=''>
           <Hero />
         </div>
       </section>

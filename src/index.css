@@ -11,3 +11,7 @@
     height: 100vh;
     background: white;
   }
+
+  #forward {
+    z-index: 99;
+  }

@@ -90,8 +90,8 @@ const Hero = () => {
         />
       </div>
 
-      <header className="py-4">
-        <div className="container flex items-center">
+      <header className="py-4 bg-white">
+        <div className="container bg-white flex items-center">
           {/* <input type="checkbox" name="" id="check" /> */}
 
           <div className="logo-container">
@@ -112,7 +112,7 @@ const Hero = () => {
             }}
           >
             <div
-              className="h-menu flexCenter md:mt-0 mt-10 gap-3"
+              className="h-menu flexCenter md:mt-0 mt-10 gap-3 text-black"
               style={getMenuStyles(menuOpened)}
             >
               <Link
@@ -162,7 +162,7 @@ const Hero = () => {
           </OutsideClickHandler>
 
           <button
-            className="menu-icon md:hidden flex items-center menu justify-center"
+            className="menu-icon md:hidden flex text-black items-center menu justify-center"
             onClick={() => setMenuOpened((prev) => !prev)}
           >
             <BiMenuAltRight size={30} />
@@ -245,9 +245,9 @@ const Hero = () => {
         </div>
       </header>
       <main>
-        <section>
-          <div className="hero-container">
-            <video autoPlay loop muted playsInline className="background-clip">
+        <section className="">
+        <div className="hero-container">
+            <video autoPlay loop muted playsInline className="background-clip" >
               <source src={Workmen} type="video/mp4"></source>
             </video>
             <div className="content flex items-center justify-center">
@@ -260,7 +260,7 @@ const Hero = () => {
                   state-of-the-art solar solutions. Embrace sustainability,
                   independence, and a greener tomorrow.
                 </p>
-                <button className="flex justify-center mx-auto bg-[#FFDB00] flex-row items-center gap-2 py-3 px-5 rounded-lg">
+                <button className="flex text-black justify-center mx-auto bg-[#FFDB00] flex-row items-center gap-2 py-3 px-5 rounded-lg">
                   <span className="">
                     <FaPlay />
                   </span>
@@ -271,11 +271,13 @@ const Hero = () => {
               </div>
             </div>
           </div>
+        </section>
+      <section className="bg-white">
           <div
-            className="max-w-[85rem] bg-white mx-auto px-[2rem] flex flex-col overflow-x-hidden mt-20 md:mr-0"
+            className="max-w-[85rem] bg-white mx-auto px-[2rem] flex flex-col overflow-x-hidden pt-20 md:mr-0"
             id="services"
           >
-            <div className="grid grid-cols-12 md:gap-10 bg-white gap-0 relative">
+            <div className="grid grid-cols-12 md:gap-10 bg-white gap-0 relative text-black">
               <div className="md:col-span-6 col-span-12 md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
                   our service
@@ -432,7 +434,7 @@ const Hero = () => {
             className="max-w-[85rem] bg-white mx-auto px-[2rem] flex flex-col overflow-hidden md:mr-0"
             id="about"
           >
-            <div className="grid grid-cols-12 md:gap-10 relative">
+            <div className="grid grid-cols-12 md:gap-10 relative text-black">
               <div className="md:col-span-6 col-span-12  md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
                   about us
@@ -458,7 +460,7 @@ const Hero = () => {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center h-full max-w-[50rem] mx-auto mt-10">
+            <div className="flex flex-col items-center text-black justify-center h-full max-w-[50rem] mx-auto mt-10">
               <div className="grid grid-cols-12 gap-3">
                 <div className="col-span-12  mb-5">
                   <p>
@@ -533,7 +535,7 @@ const Hero = () => {
             </div>
 
             <div className="grid grid-cols-12">
-              <div className="md:col-span-6 col-span-12 flex flex-col gap-5 items-center justify-center">
+              <div className="md:col-span-6 col-span-12 text-black flex flex-col gap-5 items-center justify-center">
                 <div className="flex items-cetner">
                   <div className="flex flex-row gap-3">
                     <div className="flex items-center justify-center text-5xl text-yellow-500">
@@ -635,7 +637,7 @@ const Hero = () => {
                         <input
                           type="text"
                           placeholder="Tell us your first name"
-                          className="input text-sm input-bordered"
+                          className="input bg-transparent text-sm input-bordered"
                         />
                       </div>
                       <div className="form-control">
@@ -645,7 +647,7 @@ const Hero = () => {
                         <input
                           type="text"
                           placeholder="Tell us your last name"
-                          className="input text-sm input-bordered"
+                          className="input bg-transparent text-sm input-bordered"
                         />
                       </div>
                       <div className="form-control">
@@ -655,7 +657,7 @@ const Hero = () => {
                         <input
                           type="text"
                           placeholder="email"
-                          className="input text-sm input-bordered"
+                          className="input bg-transparent text-sm input-bordered"
                         />
                       </div>
                       <div className="form-control">
@@ -667,7 +669,7 @@ const Hero = () => {
                           cols={30}
                           rows={4}
                           placeholder="Tell us what you want..."
-                          className="pt-3 text-sm input input-bordered"
+                          className="pt-3 bg-transparent text-sm input input-bordered"
                         />
                       </div>
                       <div className="form-control mt-6">
