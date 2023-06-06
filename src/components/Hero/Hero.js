@@ -167,98 +167,24 @@ const Hero = () => {
           >
             <BiMenuAltRight size={30} />
           </button>
-
-          {/* <div className="nav-btn">
-            <div className="nav-links">
-              <ul>
-                <li className="nav-link">
-                  <a href="#t">Home</a>
-                </li>
-                <li className="nav-link">
-                  <a href="#t">
-                    Products<ion-icon name="caret-down-outline"></ion-icon>
-                  </a>
-                  <div className="dropdown">
-                    <ul>
-                      <li className="dropdown-link">
-                        <a href="#t">Link 1</a>
-                      </li>
-                      <li className="dropdown-link">
-                        <a href="4#">Link 2</a>
-                      </li>
-                      <li className="dropdown-link">
-                        <a href="3#">Link 3</a>
-                      </li>
-                      <li className="dropdown-link">
-                        <a href="#2">Link 4</a>
-                      </li>
-                      <div className="arrow"></div>
-                    </ul>
-                  </div>
-                </li>
-                <li className="nav-link">
-                  <a href="f#">
-                    Services<ion-icon name="caret-down-outline"></ion-icon>
-                  </a>
-                  <div className="dropdown">
-                    <ul>
-                      <li className="dropdown-link">
-                        <a href="f#">Link 1</a>
-                      </li>
-                      <li className="dropdown-link">
-                        <a href="f#">Link 2</a>
-                      </li>
-                      <li className="dropdown-link">
-                        <a href="#f">Link 3</a>
-                      </li>
-                      <li className="dropdown-link">
-                        <a href="#f">Link 4</a>
-                      </li>
-                      <div className="arrow"></div>
-                    </ul>
-                  </div>
-                </li>
-                <li className="nav-link">
-                  <a href="#2">About</a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="log-sign md:p-0 md:m-0 my-10 contact-btn">
-              <a
-                href="#1"
-                className="btn solid flex items-center font-semibold gap-2"
-              >
-                <span>
-                  <BsHeadset />
-                </span>
-                <span>Contact Us</span>
-              </a>
-            </div>
-          </div> */}
-
-          {/* <div className="hamburger-menu-container">
-            <div className="hamburger-menu">
-              <div></div>
-            </div>
-          </div> */}
         </div>
       </header>
       <main>
         <section className="">
-        <div className="hero-container">
-            <video autoPlay loop muted playsInline className="background-clip" >
+          <div className="hero-container">
+            <video autoPlay loop muted playsInline className="background-clip">
               <source src={Workmen} type="video/mp4"></source>
             </video>
             <div className="content flex items-center justify-center">
               <div className="md:w-2/4">
                 <h1 className="text-white font-bold font-poppins text-2xl md:text-5xl text-center uppercase">
-                  Power your future with reliable solar solutions.
+                  Transform Your Energy Future with Our Solar Solutions and
+                  Embrace Sustainability.
                 </h1>
                 <p className="py-5 md:text-lg text-center text-white">
-                  Explore the limitless potential of renewable energy with our
-                  state-of-the-art solar solutions. Embrace sustainability,
-                  independence, and a greener tomorrow.
+                  Discover Limitless Renewable Energy Potential with Our
+                  Advanced Solar Solutions. Embrace Sustainability,
+                  Independence, and a Greener Tomorrow.
                 </p>
                 <button className="flex text-black justify-center mx-auto bg-[#FFDB00] flex-row items-center gap-2 py-3 px-5 rounded-lg">
                   <span className="">
@@ -272,7 +198,7 @@ const Hero = () => {
             </div>
           </div>
         </section>
-      <section className="bg-white">
+        <section className="bg-white">
           <div
             className="max-w-[85rem] bg-white mx-auto px-[2rem] flex flex-col overflow-x-hidden pt-20 md:mr-0"
             id="services"
@@ -288,9 +214,9 @@ const Hero = () => {
               </div>
               <div className="md:col-span-6 col-span-12 w-full h-full flex items-center text-[#1F2541] justify-center py-5 md:pr-0">
                 <p>
-                  We drive the transition to more sustainable reliable and
-                  affordable energy systems. With our innovative technologies,
-                  we energize society!{" "}
+                  We're Pioneering the Transition to Sustainable, Reliable, and
+                  Affordable Energy Systems with Our Innovative Technologies,
+                  Empowering Society with Clean and Accessible Energy!{" "}
                 </p>
               </div>
             </div>
@@ -307,9 +233,11 @@ const Hero = () => {
                       Solar Pannel Services
                     </h1>
                     <p className="text-sm text-[#1F2541]">
-                      Gain energy independence with our seamless solar panel
-                      installations. Trust our reputable company for clean,
-                      sustainable energy that reduces your carbon footprint.
+                      Take Control of Your Energy Future with Our Seamless Solar
+                      Panel Installations, Empowering You with Clean and
+                      Sustainable Energy that Helps Reduce Your Carbon
+                      Footprint. Trust us for Reliable and
+                      Environmentally-Friendly Energy Solutions.
                     </p>
                   </div>
                 </div>
@@ -324,10 +252,10 @@ const Hero = () => {
                       Load Assessment and Evaluation
                     </h1>
                     <p className="text-sm text-[#1F2541]">
-                      Accurate analysis and precise evaluation of your load
-                      requirements. Our experts conduct thorough assessments to
-                      determine your specific energy needs and ensure optimal
-                      performance.
+                      Our Experts Conduct Accurate and Precise Evaluations of
+                      Your Energy Load Requirements, Ensuring that Your Solar
+                      System is Customized to Meet Your Specific Energy Needs
+                      and Performs Optimally.
                     </p>
                   </div>
                 </div>
@@ -342,9 +270,11 @@ const Hero = () => {
                       Battery maintenance Services
                     </h1>
                     <p className="text-sm text-[#1F2541]">
-                      Optimize the performance and lifespan of your batteries
-                      with our expert maintenance services. Trust us to ensure
-                      reliable power when you need it most.
+                      Maximize the Performance and Lifespan of Your Batteries
+                      with Our Expert Maintenance Services. Trust Us to Ensure
+                      Reliable Power When You Need It Most, So You Can Have
+                      Peace of Mind Knowing Your Energy System is Always Ready
+                      to Go.
                     </p>
                   </div>
                 </div>
@@ -364,11 +294,11 @@ const Hero = () => {
                 </div>
                 <div className="md:my-4 my-9">
                   <h1 className="text-sm text-[#37416b] ">
-                    As a leading supplier of solar materials, we not only
-                    provide exceptional products but also offer expert
-                    maintenance services to optimize the performance and
-                    lifespan of your batteries. Trust us to ensure reliable
-                    power when you need it most.
+                    Get More Than Just Exceptional Solar Products from Us - We
+                    Also Offer Expert Maintenance Services to Help You Maximize
+                    the Performance and Lifespan of Your Batteries. Trust Us to
+                    Ensure Reliable Power When You Need It Most, So You Can
+                    Enjoy a Hassle-Free Energy System.
                   </h1>
 
                   <div>
@@ -442,21 +372,22 @@ const Hero = () => {
                 <div>
                   <div className="orange-circle"></div>
                   <h1 className="capitalize text-[#1F2541] md:pr-0 font-bold md:text-5xl text-2xl">
-                    Alpha Ziva: Igniting Africa's Energy Transformation with
-                    Reliable and Sustainable Power Solutions
+                    Alpha Ziva: Igniting Africa's Energy Revolution with
+                    Reliable and Sustainable Power Solutions.
                   </h1>
                 </div>
               </div>
               <div className="md:col-span-6 col-span-12 md:w-3/4 h-full flex items-center text-[#1F2541] md:mb-0 mb-4 justify-center md:pr-0">
                 <p>
-                  At <span className="text-[#FFA404]">Alpha ziva</span>, we are
-                  passionate about transforming the way you harness energy. As a
-                  leading provider of solar services, we specialize in
-                  delivering innovative and sustainable solutions to power your
-                  home or business. With our expertise and commitment to
-                  excellence, we empower you to embrace clean and renewable
-                  energy sources. Discover a brighter and greener future with
-                  Alpha Ziva as your trusted solar partner.
+                  At <span className="text-[#FFA404]">Alpha ziva</span>, We're
+                  Passionate About Transforming the Way You Harness Energy. As a
+                  Top Provider of Solar Services, We Specialize in Delivering
+                  Innovative and Sustainable Solutions to Power Your home,
+                  business or offices. With Our Expertise and Commitment to
+                  Excellence, We Empower You to Embrace Clean and Renewable
+                  Energy Sources, So You Can Enjoy a Brighter and Greener
+                  Future. Trust AlphaZiva as Your Trusted Solar Partner and Take
+                  the First Step Towards a Sustainable Energy Future.
                 </p>
               </div>
             </div>
@@ -464,10 +395,12 @@ const Hero = () => {
               <div className="grid grid-cols-12 gap-3">
                 <div className="col-span-12  mb-5">
                   <p>
-                    Excellence, efficiency, and unmatched customer satisfaction
-                    are the pillars of Alpha Ziva, your trusted solar company in
-                    Africa. We take great pride in delivering exceptional
-                    service that surpasses industry standards.
+                    We're Committed to Excellence, Efficiency, and Unmatched
+                    Customer Satisfaction. As Your Trusted Solar Company in
+                    Africa, We Take Great Pride in Delivering Exceptional
+                    Service that Goes Above and Beyond Industry Standards. Trust
+                    Us to Provide You with the Best Solar Solutions and Customer
+                    Experience
                   </p>
                 </div>
                 <div className="col-span-12 flex flex-col gap-5">
@@ -476,12 +409,14 @@ const Hero = () => {
                   </span>
                   <span>
                     <p>
-                      <span className="font-bold">Delivery speed</span>, we
-                      understand the urgency of implementing your solar
-                      solution. Our streamlined processes and dedicated team
-                      ensure swift and efficient installations, minimizing any
-                      disruption to your schedule. At Alpha Ziva, we believe in
-                      getting your solar system up and running without delay.
+                      <span className="font-bold">Delivery speed</span>, We
+                      Understand the Urgency of Implementing Your Solar
+                      Solution. That's Why Our Streamlined Processes and
+                      Dedicated Team Ensure Swift and Efficient Installations,
+                      Minimizing Any Disruption to Your Schedule. We Believe in
+                      Getting Your Solar System Up and Running Without Delay, So
+                      You Can Start Enjoying the Benefits of Clean and
+                      Sustainable Energy as Soon as Possible.
                     </p>
                   </span>
                 </div>
@@ -490,12 +425,14 @@ const Hero = () => {
                     <img src={Tool} alt="" />
                   </span>
                   <span>
-                    <span className="font-bold">Maintenance</span> is at the
-                    heart of our commitment to your long-term satisfaction. Our
-                    experienced technicians provide comprehensive support to
-                    keep your solar system performing optimally. From routine
-                    inspections to proactive maintenance, we ensure that your
-                    investment continues to generate clean energy efficiently.
+                    <span className="font-bold">Maintenance</span> is Key to Our
+                    Commitment to Your Long-Term Satisfaction at AlphaZiva. Our
+                    Experienced Technicians Provide Comprehensive Support to
+                    Keep Your Solar System Performing at Its Best. We Offer
+                    Routine Inspections and Proactive Maintenance to Ensure that
+                    Your Investment Continues to Generate Clean Energy
+                    Efficiently, So You Can Enjoy a Hassle-Free Energy System
+                    and a Brighter Future.
                   </span>
                 </div>
               </div>
@@ -506,13 +443,11 @@ const Hero = () => {
                   </span>
                   <span>
                     <p>
-                      <span className="font-bold">Distance </span>is never an
-                      obstacle with Alpha Ziva. Our services span across the
-                      entire African continent. Regardless of your location,
-                      from bustling urban centers to remote rural areas, we
-                      bring our expertise and reliable solutions to meet your
-                      unique energy needs. Our mission is to make clean energy
-                      accessible and affordable for all Africans.
+                      <span className="font-bold">Distance </span> is No Barrier
+                      to Clean Energy with AlphaZiva. Our Services Cover the
+                      Entire African Continent, Bringing Our Expertise and
+                      Reliable Solutions to Meet Your Unique Energy Needs
+                      Wherever You Are.
                     </p>
                   </span>
                 </div>
@@ -526,7 +461,7 @@ const Hero = () => {
                 our happy customers
               </h1>
               <p className="md:text-5xl text-3xl text-center text-[#1B213E] font-bold px-3 md:mx-0">
-                Providing value to our clients through ongoing Products.
+                Delivering Continuous Value to Our Clients Through Our Products.
               </p>
             </div>
 
@@ -618,11 +553,13 @@ const Hero = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                   <div className="text-center lg:text-left">
                     <h1 className="md:text-5xl text-2xl font-bold text-white">
-                      Request a Quote now!
+                      Get Your Personalized Quote Today!
                     </h1>
                     <p className="py-6 md:w-3/4 text-white">
-                      Simplify procurement. Get tailored quotes from us with a
-                      few clicks. Streamline your decision-making process today.
+                      Discover the Perfect Solar Solution for Your Home or
+                      Business. Request Your Personalized Quote Today and Let Us
+                      Help You Harness the Power of Clean and Sustainable
+                      Energy.
                     </p>
                   </div>
                   <div
@@ -694,8 +631,8 @@ const Hero = () => {
                 <div className="flexColStart f-left">
                   <img src={logo} alt="company" className="w-2/4 md:w-1/5" />
                   <span className="secondaryText">
-                    Our vision is to make all people <br /> the best place for
-                    them
+                    Leading the Charge <br /> Towards a Brighter and Greener
+                    Africa with Innovative Solar Solutions.
                   </span>
                 </div>
 
@@ -705,6 +642,9 @@ const Hero = () => {
                     14 Hilltop Crescent, Off Ekwueme Close, Core Area,
                     Asaba Delta State
                   </span>
+                  <a href="mailto:info@alphaziva.com" className="text-blue-900 link">
+                    info@alphaziva.com
+                  </a>
 
                   <div className="flexCenter f-menu text-xs">
                     <Link
