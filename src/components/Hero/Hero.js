@@ -280,7 +280,7 @@ const Hero = () => {
             <div className="grid grid-cols-12 md:gap-10 bg-white gap-0 relative text-black">
               <div className="md:col-span-6 col-span-12 md:pr-0  flex flex-col items-start justify-center w-full">
                 <h2 className="text-[#FFA404] uppercase my-5 font-bold text-2xl">
-                  our service
+                  our services
                 </h2>
                 <h1 className="capitalize text-[#1F2541] font-bold text-2xl md:text-5xl">
                   We drive the transition to reliable energy
@@ -304,7 +304,7 @@ const Hero = () => {
                   </div>
                   <div className="flex flex-col gap-4 md:mr-0 ">
                     <h1 className="text-[#37416b] font-semibold text-xl">
-                      Solar Pannel Services
+                      Solar Panel Services
                     </h1>
                     <p className="text-sm text-[#1F2541]">
                       Gain energy independence with our seamless solar panel
