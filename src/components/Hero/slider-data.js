@@ -11,7 +11,7 @@ export const sliderData = [
   },
   {
     image: "https://i.postimg.cc/MpHG0S3L/pannel2.jpg",
-    heading: "Solar Pannel Services",
+    heading: "Solar Panel Services",
     desc: "At AlphaZiva, We're Committed to Helping You Achieve Energy Independence. Our Seamless Solar Panel Installations Provide Clean and Sustainable Energy, So You Can Enjoy the Freedom and Peace of Mind that Comes with Harnessing the Sun's Power. Trust Us to Make the Switch to Solar Power Easy and Hassle-Free.",
   },
 ];
