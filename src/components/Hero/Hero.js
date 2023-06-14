@@ -1,8 +1,9 @@
 import React from "react";
 import "./Hero.css";
 import "./herostyle.css";
+import emailjs from '@emailjs/browser';
 import { sliderData } from "./slider-data";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BsArrowLeft } from "react-icons/bs";
 import { BsHeadset } from "react-icons/bs";
 import { FaPlay } from "react-icons/fa";
@@ -30,6 +31,13 @@ import {BiMenuAltRight} from 'react-icons/bi'
 import { MdHeadsetMic } from "react-icons/md"
 import ScrollToTop from "react-scroll-to-top";
 import OutsideClickHandler from "react-outside-click-handler";
+
+const Result =() => 
+{
+  return (
+    <p>Your message has been successfully sent</p>
+  )
+}
 
 const Hero = () => {
   const [menuOpened, setMenuOpened]= useState(false)
@@ -77,6 +85,21 @@ const Hero = () => {
     enableScrollSpy: true,
     scrollSpyDelay: 1000,
   });
+
+  const form = useRef();
+  const [result, showResult] = useState(false)
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1pzb09c', 'template_i7845qg', form.current, 'M4Rlrnw4FUH3GQ5eM')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+      showResult(true)
+  };
 
   return (
     <div>
@@ -566,24 +589,16 @@ const Hero = () => {
                     className="card bg-white flex-shrink-0 w-full max-w-sm shadow-2xl"
                     id="border"
                   >
+                    <form ref={form} onSubmit={sendEmail}>
                     <div className="card-body bg-white">
                       <div className="form-control">
                         <label className="label">
-                          <span className="label-text">Firstname</span>
+                          <span className="label-text">Fullname</span>
                         </label>
                         <input
                           type="text"
-                          placeholder="Tell us your first name"
-                          className="input bg-transparent text-sm input-bordered"
-                        />
-                      </div>
-                      <div className="form-control">
-                        <label className="label">
-                          <span className="label-text">Lastname</span>
-                        </label>
-                        <input
-                          type="text"
-                          placeholder="Tell us your last name"
+                          name="from_name"
+                          placeholder="Tell us your name"
                           className="input bg-transparent text-sm input-bordered"
                         />
                       </div>
@@ -592,8 +607,20 @@ const Hero = () => {
                           <span className="label-text">Email</span>
                         </label>
                         <input
-                          type="text"
+                          type="email"
+                          name="user_email"
                           placeholder="email"
+                          className="input bg-transparent text-sm input-bordered"
+                        />
+                      </div>
+                      <div className="form-control">
+                        <label className="label">
+                          <span className="label-text">Phone number</span>
+                        </label>
+                        <input
+                          type="tel"
+                          name="user_phone"
+                          placeholder="Contact number"
                           className="input bg-transparent text-sm input-bordered"
                         />
                       </div>
@@ -605,19 +632,25 @@ const Hero = () => {
                           type="textarea"
                           cols={30}
                           rows={4}
+                          name="message"
                           placeholder="Tell us what you want..."
                           className="pt-3 bg-transparent text-sm input input-bordered"
                         />
                       </div>
                       <div className="form-control mt-6">
-                        <button className="btn bg-[#FFA404] text-white border border-[#FFA404] uppercase gap-2">
+                        <button className="btn bg-[#FFA404] text-white border border-[#FFA404] uppercase gap-2" type="submit" >
                           <span>Submit</span>
                           <span>
                             <TbSend />
                           </span>
                         </button>
                       </div>
+
+                      <div className="flex">
+                        {result ? <Result /> : null}
+                      </div>
                     </div>
+                    </form>
                   </div>
                 </div>
               </div>
