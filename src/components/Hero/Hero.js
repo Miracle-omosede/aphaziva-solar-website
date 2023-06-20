@@ -32,6 +32,8 @@ import { MdHeadsetMic } from "react-icons/md"
 import ScrollToTop from "react-scroll-to-top";
 import OutsideClickHandler from "react-outside-click-handler";
 
+// app password 92DPc59WAxL3
+
 const Result =() => 
 {
   return (
@@ -91,7 +93,7 @@ const Hero = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_1pzb09c', 'template_i7845qg', form.current, 'M4Rlrnw4FUH3GQ5eM')
+    emailjs.sendForm('service_3r2tmvu', 'template_wnf4ll6', form.current, 'U-SMYtjDzq329-nph')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
